@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Button = ({className,label}) => {
   return (
@@ -8,4 +8,4 @@ const Button = ({className,label}) => {
   )
 }
 
-export default Button
+export default memo(Button)
