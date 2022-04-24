@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './core-ui/GlobalStyle.style';
 import { Provider } from 'react-redux';
 import store from './store';
 import Home from './containers/Home/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import PageNotFound from './containers/PageNotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyle/>
+    <GlobalStyle />
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Home/>} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>
