@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 
 const PageNotFound = ({className}) => {
   return (
@@ -8,4 +8,4 @@ const PageNotFound = ({className}) => {
   )
 }
 
-export default PageNotFound
+export default memo(PageNotFound)

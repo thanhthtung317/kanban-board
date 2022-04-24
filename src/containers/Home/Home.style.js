@@ -2,9 +2,11 @@ import styled from 'styled-components'
 import Home from './Home'
 
 const StyledHome = styled(Home)`
-    width: 100vw;
-    height: 100%;
-    background-color: red;
-`
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #a9ddd6;
+  display: flex;
+  justify-content: space-between;
+`;
 
 export default StyledHome;
