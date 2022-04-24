@@ -1,8 +1,10 @@
 import React from 'react'
 
-const PageNotFound = () => {
+const PageNotFound = ({className}) => {
   return (
-    <div>PageNotFound</div>
+    <main className={className}>
+        <h1>page not found</h1>
+    </main>
   )
 }
 
