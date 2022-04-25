@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const List = () => {
+const List = ({className, id}) => {
   return (
-    <section>
-        List
+    <section className={className}>
+        {id}
     </section>
   )
 }
 
-export default List
+export default memo(List)

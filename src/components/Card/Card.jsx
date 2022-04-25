@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const Card = ({className}) => {
+const Card = ({className, title}) => {
   return (
     <article className={className}>
-        Card
+        <h3>{title}</h3>
     </article>
   )
 }
 
-export default Card
+export default memo(Card)
