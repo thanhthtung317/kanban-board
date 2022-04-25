@@ -1,9 +1,11 @@
 import React, { memo } from 'react'
+import { StyledCards } from '../Cards'
 
-const List = ({className, id}) => {
+const List = ({className, id, title}) => {
   return (
     <section className={className}>
-        {id}
+        <h2>{title}</h2>
+        <StyledCards listID={id}/>
     </section>
   )
 }

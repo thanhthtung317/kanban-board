@@ -1,11 +1,24 @@
 import React, { memo } from 'react'
+import { connect } from 'react-redux'
+import selectedCard from '../../selectors/cards-selector';
 
-const Card = ({className, title}) => {
+const Card = ({className, card}) => {
+
+  const {id, title, description} = card;
+
+  // console.log(card);
   return (
     <article className={className}>
-        <h3>{title}</h3>
+        <h4>{title}</h4>
+        <p>{description}</p>
     </article>
   )
 }
 
-export default memo(Card)
+const mapStateToProps = (state, ownProps)=>{
+  return {
+    card: selectedCard(state).entities[ownProps.id]
+  }
+}
+
+export default connect(mapStateToProps)(memo(Card))

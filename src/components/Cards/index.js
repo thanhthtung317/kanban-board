@@ -1,3 +1,3 @@
-import { StyledCards } from "./Card.style";
+import { StyledCards } from "./Cards.style";
 
 export { StyledCards };

@@ -1,15 +1,25 @@
+import clsx from 'clsx'
 import React,{memo} from 'react'
-import {cards} from '../../normalize-data'
+import { connect } from 'react-redux'
+import selectedList from '../../selectors/lists-selector'
 import { StyledCard } from '../Card'
 
-const Cards = ({className}) => {
-    const cardItems = Object.values(cards)
+
+const Cards = ({className, cards=[]}) => {
+
+  // console.log(cards);
 
   return (
-    <div className={className}>
-        {cardItems.map(item=><StyledCard key={item.id} {...item}/>)}
+    <div className={clsx(className, 'cards-container')}>
+        {cards.map(item=><StyledCard key={item} id={item}/>)}
     </div>
   )
 }
 
-export default memo(Cards)
+const mapStateToProps = (state, ownProps) => {
+  return {
+    cards: selectedList(state).entitis[ownProps.listID].cards
+  }
+}
+
+export default connect(mapStateToProps)(memo(Cards))

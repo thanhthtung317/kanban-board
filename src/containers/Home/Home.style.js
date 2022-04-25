@@ -6,6 +6,12 @@ const StyledHome = styled(Home)`
   min-height: 100vh;
   background-color: #a9ddd6;
 
+  h1{
+    text-transform: capitalize;
+    text-align: center;
+    padding: .5em 0;
+  }
+
   & .container {
     display: flex;
     justify-content: space-between;
