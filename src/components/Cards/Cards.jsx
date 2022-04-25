@@ -18,7 +18,7 @@ const Cards = ({className, cards=[]}) => {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    cards: selectedList(state).entitis[ownProps.listID].cards
+    cards: selectedList(state).entities[ownProps.listID].cards
   }
 }
 

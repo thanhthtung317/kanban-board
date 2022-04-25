@@ -6,7 +6,7 @@ import { StyledList } from '../List';
 
 const Lists = ({className, lists}) => {
   // console.log(lists);
-  const listItems = Object.values(lists.entitis)
+  const listItems = Object.values(lists.entities)
 
   return (
     <div className={clsx(className, "container")}>

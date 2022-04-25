@@ -9,7 +9,7 @@ const normalizedList = normalize(nestedData.lists, [list])
 const normalizedUser = normalize(nestedData.users, [user])
 
 export const lists = {
-    entitis: normalizedList.entities.lists,
+    entities: normalizedList.entities.lists,
     ids: normalizedList.result
 }
 
