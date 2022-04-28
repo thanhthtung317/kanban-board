@@ -1,12 +1,10 @@
 import React, { memo } from 'react'
 import { connect } from 'react-redux'
 import useListContext from '../../hooks/useListContext'
-import selectedCard from '../../selectors/cards-selector'
 import selectedList from '../../selectors/lists-selector'
-import { cardActions } from '../../store/cards-slice'
 import { listAction } from '../../store/lists-slice'
 
-const Selects = ({className, cardID, lists, setSelectedCard, selectedCard, switchList}) => {
+const Selects = ({className, cardID, lists, switchList}) => {
 
   const prevListID = useListContext()
   // console.log('list id:', listID)
@@ -33,14 +31,12 @@ const Selects = ({className, cardID, lists, setSelectedCard, selectedCard, switc
 }
 
 const mapDispatchToProps = {
-  setSelectedCard: cardActions.setSelectedCard,
   switchList: listAction.switchList
 }
 
 const mapStateToProps = (state)=>{
   return {
-    lists: selectedList(state),
-    selectedCard: selectedCard(state).selectedCard
+    lists: selectedList(state)
   }
 }
 
