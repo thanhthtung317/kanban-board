@@ -1,12 +1,15 @@
-import React, { memo } from 'react'
+import React, { createContext, memo } from 'react'
 import { StyledCards } from '../Cards'
+export const listContext = createContext();
 
 const List = ({className, id, title}) => {
   return (
-    <section className={className}>
+    <listContext.Provider value={id}>
+      <section className={className}>
         <h2>{title}</h2>
         <StyledCards listID={id}/>
-    </section>
+      </section>
+    </listContext.Provider>
   )
 }
 

@@ -5,7 +5,7 @@ import { GlobalStyle } from './core-ui/GlobalStyle.style';
 import { Provider } from 'react-redux';
 import store from './store';
 import {Home} from './containers/Home';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageNotFound from './containers/PageNotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

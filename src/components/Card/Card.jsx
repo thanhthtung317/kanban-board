@@ -1,13 +1,13 @@
 import React, { memo, useMemo } from 'react'
 import { connect } from 'react-redux'
-import getAllListType from '../../helpers/list-helpers/getAllListType';
+import getAllListTypeIDs from '../../helpers/list-helpers/getAllListTypeIDs';
 import selectedCard from '../../selectors/cards-selector';
 import selectedList from '../../selectors/lists-selector';
 import { StyledSelect } from '../Selects';
 
 const Card = ({className, card , lists}) => {
 
-  const allListType = useMemo(()=>getAllListType(lists.entities),[lists.entities])
+  const allListType = useMemo(()=>getAllListTypeIDs(lists.entities),[lists.entities])
     // const allListType = getAllListType(lists)
   const {id, title, description} = card;
   // console.log(allListType);
@@ -20,7 +20,7 @@ const Card = ({className, card , lists}) => {
     <article className={className}>
         <h4>{title}</h4>
         <p>{description}</p>
-        <StyledSelect options={allListType}/>
+        <StyledSelect options={allListType} cardID={id}/>
     </article>
   )
 }
