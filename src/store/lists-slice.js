@@ -21,10 +21,7 @@ const listSlice = createSlice({
     },
     addCardToList(state, action) {
       const { currentListID, cardID } = action.payload;
-      state.entities[currentListID].cards = [
-        ...state.entities[currentListID].cards,
-        cardID,
-      ];
+      state.entities[currentListID].cards.unshift(cardID)
     },
   },
 });
