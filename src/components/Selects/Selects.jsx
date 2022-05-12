@@ -11,6 +11,7 @@ const Selects = ({className, cardID, lists, switchList}) => {
   const listItems = Object.values(lists.entities);
   // console.log('selected card: ',selectedCard);
   // console.log(lists);
+  console.log('Select re-render');
 
   const handleOnchange = (listID)=>{
     switchList({prevListID, listID, cardID})

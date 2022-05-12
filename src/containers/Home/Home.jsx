@@ -4,7 +4,7 @@ import { StyledLists } from '../../components'
 const Home = ({className}) => {
   return (
     <main className={className}>
-        <h1>normalizing data and optimizing react app pratice</h1>
+        <h1>Kankan board</h1>
         <StyledLists/>
     </main>
   )
